@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class Distance() {
+public class Distance {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 	for(int i = 0; i < 4; i ++) {
@@ -12,7 +12,7 @@ public class Distance() {
             System.out.print("X1: ");
             double x2 = scanner.nextDouble();
             System.out.print("Y1: ");
-            double y1 = scanner.nextDouble();
+            double y2 = scanner.nextDouble();
             distance(x1, y1, x2, y2);
         }
     }

@@ -22,7 +22,7 @@ class AsciiBox
 		System.out.println("+++++++++++++++++++++++++");
 		System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaa");
 		System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaa");
-	        System.out.println("+++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++");
 		System.out.println("+++++++++++++++++++++++++");
 		System.out.println("+++++++++++++++++++++++++");
 	}
