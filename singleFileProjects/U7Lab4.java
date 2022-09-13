@@ -1,9 +1,13 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class U7Lab4 {
-    public static void main(String[] args) {
-        System.out.println(checkSSN("463-44-5678"));
-        System.out.println(checkSSN("46-144-5678"));
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner scanner = new Scanner(new File("input.dat"));
+        while(scanner.hasNext()) {
+            System.out.println(checkSSN(scanner.nextLine()));
+        }
     }
     public static String checkSSN(String ssn) {
         String[] groups = ssn.split("-");

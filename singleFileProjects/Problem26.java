@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Problem26 {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner file = new Scanner(new File("data.dat"));
+        Scanner file = new Scanner(new File("input.dat"));
         int j = file.nextInt();
         for (int i = 0; i < j; i++) {
             int x = file.nextInt();
