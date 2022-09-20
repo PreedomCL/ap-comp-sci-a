@@ -15,6 +15,7 @@ public class LabCreator {
         String methodName = scanner.nextLine();
 
         ArrayList<String> data = new ArrayList<>();
+        System.out.println("Enter data now. Enter \"done\" to finish");
         while(scanner.hasNextLine()) {
             String line = scanner.nextLine();
             if(line.equals("done"))
@@ -31,27 +32,34 @@ public class LabCreator {
                     "\n" +
                     "public class " + labName + " {\n" +
                     "    public static void main(String[] args) throws FileNotFoundException {\n" +
-                    "        Scanner scanner = new Scanner(new File(\"" + labName +"Input.dat\"));\n" +
+                    "        Scanner scanner = new Scanner(new File(\"" + labName +"Data.dat\"));\n" +
                     "\n" +
                     "        while(scanner.hasNextLine()) {\n" +
                     "            System.out.println(" + methodName + "(scanner.nextLine()));\n" +
                     "        }\n" +
                     "    }\n" +
                     "\n" +
-                    "    public static String " + methodName + "(String SSN) {\n" +
-                    "        return \"output\"\n" +
+                    "    public static String " + methodName + "(String input) {\n" +
+                    "        return input;\n" +
                     "    }\n" +
                     "}\n");
             writer.close();
+        }else {
+            System.out.println("Could not create " + labName + ".java! Maybe it already exists?");
+            System.out.println("Exiting LabCreator...");
+            return;
         }
-        File inputFile = new File(labName + "Input.dat");
-        if(labFile.createNewFile()) {
+        File inputFile = new File(labName + "Data.dat");
+        if(inputFile.createNewFile()) {
             FileWriter writer = new FileWriter(inputFile);
             for(String s: data) {
-                writer.write(s);
+                writer.write(s + "\n");
             }
             writer.close();
+        }else {
+            System.out.println("Could not create " + labName + "Data.dat! You may need to populate it manually");
         }
+        System.out.println(labName + " successfully created in: " + System.getProperty("user.dir"));
     }
 
 }
