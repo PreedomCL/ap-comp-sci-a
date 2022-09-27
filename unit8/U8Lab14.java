@@ -13,6 +13,25 @@ public class U8Lab14 {
             String name2 = scanner.next();
             System.out.print("Enter 2nd monster's size: ");
             int size2 = scanner.nextInt();
+
+            Monster monster1 = new Monster(name1, size1);
+            Monster monster2 = new Monster(name2, size2);
+
+            System.out.println("");
+
+            System.out.println(monster1);
+            System.out.println(monster2);
+
+            if(monster1.size > monster2.size) {
+                System.out.println("Monster one is bigger than Monster two");
+            }else {
+                System.out.println("Monster one is smaller than Monster two");
+            }
+
+            if(monster1.name.equals(monster2.name)) {
+                System.out.println("Monster one has the same name as Monster two");
+            }
+            System.out.println("");
         }
     }
 }

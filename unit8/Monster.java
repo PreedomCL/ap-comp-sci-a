@@ -6,4 +6,9 @@ public class Monster {
         this.name = name;
         this.size = size;
     }
+
+    @Override
+    public String toString() {
+        return name + " " + size;
+    }
 }
