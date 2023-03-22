@@ -1,0 +1,19 @@
+public class CodeWordChecker implements StringChecker {
+
+    private int minLength = 6, maxLength = 20;
+    private String cannotOccur;
+
+    public CodeWordChecker(int minLength, int maxLength, String cannotOccur) {
+        this.minLength = minLength;
+        this.maxLength = maxLength;
+        this.cannotOccur = cannotOccur;
+    }
+
+    public CodeWordChecker(String cannotOccur) {
+        this.cannotOccur = cannotOccur;
+    }
+
+    public boolean isValid(String str) {
+        return !(str.length() < minLength || str.length() > maxLength || str.contains(cannotOccur));
+    }
+}

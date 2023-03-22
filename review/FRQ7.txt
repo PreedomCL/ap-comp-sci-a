@@ -1,0 +1,30 @@
+public double totalValue() {
+    double sum = 0;
+    for(Card c: collection) {
+        sum += c.getValue();
+    }
+    return sum;
+}
+
+public void checkPerfect() {
+    for(Card c: collection) {
+        if(c.getCondition.equals("perfect")) {
+            System.out.println(c.getName());
+        }
+    }
+}
+
+public void orderNumerically() {
+    for(int i = 0; i < collection.size()-1; i++) {
+        Card currentElement = collection.get(i);
+        int minIndex = i + 1;
+        for(int j = i + 1; j < collection.size(); j++) {
+            if(collection.get(j).getSetNum() < collection.get(minIndex).getSetNum()) {
+                minIndex = j;
+            }
+        }
+
+        collection.set(i, collection.get(minIndex));
+        collection.set(minIndex, currentElement);
+    }
+}

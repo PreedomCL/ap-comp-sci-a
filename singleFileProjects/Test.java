@@ -26,13 +26,10 @@ class Test {
 	}
 
 	public static void main(String[] args) {
-		String doubles = "1.5 7.4  9.3   3.2   2.0";
-		Scanner chopAh = new Scanner(doubles);
-		while(chopAh.hasNextDouble())
-		{
-			double val = chopAh.nextDouble();
-			out.println(val);
-		}
-
+		int total = 0;
+		for( int i = 0; i <= 10; i =  i + 3 )
+			for( int x = 1; x <= i; x = x + 2)
+		total = total + x;
+		System.out.println(total);
 	}
 }
